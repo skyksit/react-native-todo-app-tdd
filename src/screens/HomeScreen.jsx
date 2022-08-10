@@ -5,8 +5,8 @@ import TaskInput from '../components/TaskInput';
 import TaskList from '../components/TaskList';
 
 const initialData = [
-  {subject: 'Learn React Native'},
-  {subject: 'Create a React Native app'},
+  {id: '1', subject: 'Learn React Native'},
+  {id: '2', subject: 'Create a React Native app'},
 ];
 
 export default function App() {

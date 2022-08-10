@@ -13,8 +13,8 @@ function getAppComponent(temprops) {
 describe('TaskList render', () => {
   props = {
     data: [
-      {subject: 'Learn React Native'},
-      {subject: 'Create a React Native app'},
+      {id: '1', subject: 'Learn React Native'},
+      {id: '2', subject: 'Create a React Native app'},
     ],
   };
 

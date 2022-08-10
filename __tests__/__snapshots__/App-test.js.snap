@@ -41,12 +41,184 @@ exports[`App render snapshot test 1`] = `
   />
   <RCTScrollView>
     <View>
-      <Text>
-        Learn React Native
-      </Text>
-      <Text>
-        Create a React Native app
-      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "marginLeft": 8,
+            "width": 735,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "green",
+                "fontSize": 13,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="checkbox"
+        >
+          
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "black",
+              "flex": 1,
+              "fontSize": 20,
+            }
+          }
+        >
+          Learn React Native
+        </Text>
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "blue",
+                "fontSize": 18,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="edit"
+        >
+          
+        </Text>
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "red",
+                "fontSize": 18,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="delete"
+        >
+          
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "marginLeft": 8,
+            "width": 735,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "green",
+                "fontSize": 13,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="checkbox"
+        >
+          
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "black",
+              "flex": 1,
+              "fontSize": 20,
+            }
+          }
+        >
+          Create a React Native app
+        </Text>
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "blue",
+                "fontSize": 18,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="edit"
+        >
+          
+        </Text>
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "red",
+                "fontSize": 18,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="delete"
+        >
+          
+        </Text>
+      </View>
     </View>
   </RCTScrollView>
 </RCTSafeAreaView>

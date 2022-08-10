@@ -1,11 +1,12 @@
 import React from 'react';
-import {ScrollView, Text} from 'react-native';
+import {ScrollView} from 'react-native';
+import TaskItem from './TaskItem';
 
 const TaskList = ({data}) => {
   return (
     <ScrollView>
       {data.map(item => (
-        <Text>{item.subject}</Text>
+        <TaskItem key={item.id} data={item} />
       ))}
     </ScrollView>
   );
