@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render snapshot test 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text>
+    Todo TDD
+  </Text>
+  <TextInput
+    placeholder="+ Add a Task"
+  />
+  <Text>
+    Learn React Native
+  </Text>
+</View>
+`;
