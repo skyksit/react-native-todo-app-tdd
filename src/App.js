@@ -1,13 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {StyleSheet, StatusBar, SafeAreaView} from 'react-native';
+
+import HomeScreen from './screens/HomeScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Todo TDD</Text>
-      <TextInput placeholder="+ Add a Task" />
-      <Text>Learn React Native</Text>
-    </View>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView style={styles.container}>
+        <HomeScreen />
+      </SafeAreaView>
+    </>
   );
 }
 

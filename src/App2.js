@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, StatusBar, SafeAreaView} from 'react-native';
 
-import HomeScreen from './screens/HomeScreen';
+import HomeScreen from './screens/HomeScreen2';
 
 export default function App() {
   return (

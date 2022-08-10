@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App render snapshot test 1`] = `
-<View
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Object {
       "alignItems": "center",
@@ -11,14 +12,42 @@ exports[`App render snapshot test 1`] = `
     }
   }
 >
-  <Text>
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 40,
+        "fontWeight": "600",
+        "margin": 30,
+      }
+    }
+  >
     Todo TDD
   </Text>
   <TextInput
     placeholder="+ Add a Task"
+    style={
+      Object {
+        "alignItems": "center",
+        "borderColor": "#ccc",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "fontSize": 20,
+        "margin": 5,
+        "padding": 8,
+        "width": 735,
+      }
+    }
   />
-  <Text>
-    Learn React Native
-  </Text>
-</View>
+  <RCTScrollView>
+    <View>
+      <Text>
+        Learn React Native
+      </Text>
+      <Text>
+        Create a React Native app
+      </Text>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
 `;
