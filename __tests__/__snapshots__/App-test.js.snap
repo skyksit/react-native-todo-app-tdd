@@ -55,28 +55,46 @@ exports[`App render snapshot test 1`] = `
           }
         }
       >
-        <Text
-          allowFontScaling={false}
-          selectable={false}
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "color": "green",
-                "fontSize": 13,
-              },
-              undefined,
-              Object {
-                "fontFamily": "Feather",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "opacity": 1,
+            }
           }
           testID="checkbox"
         >
-          
-        </Text>
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "green",
+                  "fontSize": 13,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Feather",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
         <Text
           style={
             Object {
@@ -144,28 +162,46 @@ exports[`App render snapshot test 1`] = `
           }
         }
       >
-        <Text
-          allowFontScaling={false}
-          selectable={false}
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "color": "green",
-                "fontSize": 13,
-              },
-              undefined,
-              Object {
-                "fontFamily": "Feather",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "opacity": 1,
+            }
           }
           testID="checkbox"
         >
-          
-        </Text>
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "green",
+                  "fontSize": 13,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Feather",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
         <Text
           style={
             Object {

@@ -1,36 +1,54 @@
 import 'react-native';
 import React from 'react';
-import {render, screen} from '@testing-library/react-native';
+import {render, cleanup, fireEvent} from '@testing-library/react-native';
 
 import TaskItem from '../TaskItem';
 
+let wrapper;
 let props;
 
-function getAppComponent(temProps) {
-  return <TaskItem {...temProps} />;
-}
-
 describe('TaskItem render', () => {
-  props = {key: '1', data: {id: '1', subject: 'Learn React Native'}};
+  beforeEach(() => {
+    props = {
+      key: '1',
+      data: {id: '1', subject: 'Learn React Native', done: false},
+    };
+    wrapper = render(<TaskItem {...props} />);
+  });
+  afterEach(cleanup);
 
   it('should render checkbox Icon', () => {
-    render(getAppComponent(props));
-    const element = screen.getByTestId('checkbox');
+    const element = wrapper.getByTestId('checkbox');
     expect(element).toBeTruthy();
   });
   it('should render subject', () => {
-    render(getAppComponent(props));
-    const element = screen.getByText('Learn React Native');
+    const element = wrapper.getByText('Learn React Native');
     expect(element).toBeTruthy();
   });
   it('should render edit Icon', () => {
-    render(getAppComponent(props));
-    const element = screen.getByTestId('edit');
+    const element = wrapper.getByTestId('edit');
     expect(element).toBeTruthy();
   });
   it('should render delete Icon', () => {
-    render(getAppComponent(props));
-    const element = screen.getByTestId('delete');
+    const element = wrapper.getByTestId('delete');
     expect(element).toBeTruthy();
+  });
+});
+
+describe('TaskItem interaction', () => {
+  beforeEach(() => {
+    props = {
+      key: '1',
+      data: {id: '1', subject: 'Learn React Native', done: false},
+      onToggleCheckbox: jest.fn(),
+    };
+    wrapper = render(<TaskItem {...props} />);
+  });
+  afterEach(cleanup);
+
+  it('should call toggle method when checkbox is clicked', () => {
+    const element = wrapper.getByTestId('checkbox');
+    fireEvent(element, 'pressOut');
+    expect(props.onToggleCheckbox).toHaveBeenCalledTimes(1);
   });
 });

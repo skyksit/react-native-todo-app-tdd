@@ -19,10 +19,17 @@ describe('HomeScreen Component Rendering', () => {
   it('should render Title', () => {
     expect(wrapper.getByText('Todo TDD')).toBeTruthy();
   });
+
   it('should add a new task', async () => {
     const element = wrapper.getByPlaceholderText('+ Add a Task');
     fireEvent.changeText(element, inputText);
     fireEvent(element, 'onSubmitEditing');
     await expect(wrapper.getByText(inputText)).toBeTruthy();
+  });
+
+  it('should toggle status when checkbox is clicked', async () => {
+    const elements = wrapper.getAllByTestId('checkbox');
+    expect(elements.length).toBe(2);
+    fireEvent(elements[0], 'onPressOut');
   });
 });

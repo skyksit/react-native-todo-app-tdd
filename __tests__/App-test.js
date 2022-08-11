@@ -17,10 +17,10 @@ describe('App render', () => {
     component = render(getAppComponent(props));
   });
 
-  // it('snapshot test', () => {
-  //   const snapshot = component.toJSON();
-  //   expect(snapshot).toMatchSnapshot();
-  // });
+  it('snapshot test', () => {
+    const snapshot = component.toJSON();
+    expect(snapshot).toMatchSnapshot();
+  });
 
   it('should render title Todo TDD', () => {
     const title = screen.getByText('Todo TDD');

@@ -6,8 +6,8 @@ import TaskList from '../components/TaskList';
 import shortid from 'shortid';
 
 const initialData = [
-  {id: shortid.generate(), subject: 'Learn React Native'},
-  {id: shortid.generate(), subject: 'Create a React Native app'},
+  {id: shortid.generate(), subject: 'Learn React Native', done: false},
+  {id: shortid.generate(), subject: 'Create a React Native app', done: false},
 ];
 
 export default function App() {
@@ -19,8 +19,19 @@ export default function App() {
   };
 
   const handleAddTask = () => {
-    setData([...data, {id: shortid.generate(), subject: newTask}]);
+    setData([...data, {id: shortid.generate(), subject: newTask, done: false}]);
     setNewTask('');
+  };
+
+  const handleToggleItem = item => {
+    setData(prevData => {
+      const newData = [...prevData];
+      const index = prevData.indexOf(item);
+      newData[index] = {...item, done: !item.done};
+
+      console.log(JSON.stringify(newData));
+      return newData;
+    });
   };
 
   return (
@@ -31,7 +42,7 @@ export default function App() {
         onChangeText={handleInputTextChange}
         onSubmitEditing={handleAddTask}
       />
-      <TaskList data={data} />
+      <TaskList data={data} onToggleCheckbox={handleToggleItem} />
     </>
   );
 }

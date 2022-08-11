@@ -1,6 +1,12 @@
 import React from 'react';
 import FeatIcon from 'react-native-vector-icons/Feather';
-import {Dimensions, StyleSheet, View, Text} from 'react-native';
+import {
+  Dimensions,
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 
 FeatIcon.loadFont();
 
@@ -22,12 +28,19 @@ const IconSizes = {
   extraLarge: 27,
 };
 
-const TaskItem = props => {
-  const {data} = props;
+const TaskItem = ({data, onToggleCheckbox}) => {
+  const {subject} = data;
+
+  const handleToggleCheckbox = () => {
+    onToggleCheckbox(data);
+  };
+
   return (
     <View style={styles.taskItem}>
-      <FeatherIcon name="square" size="small" color="green" testId="checkbox" />
-      <Text style={styles.subject}>{data.subject}</Text>
+      <TouchableOpacity onPressOut={handleToggleCheckbox} testID="checkbox">
+        <FeatherIcon name="square" size="small" color="green" />
+      </TouchableOpacity>
+      <Text style={styles.subject}>{subject}</Text>
       <FeatherIcon name="edit-2" size="medium" color="blue" testId="edit" />
       <FeatherIcon name="delete" size="medium" color="red" testId="delete" />
     </View>
