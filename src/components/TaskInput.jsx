@@ -1,8 +1,16 @@
 import React from 'react';
 import {Dimensions, StyleSheet, TextInput} from 'react-native';
 
-const TaskInput = () => {
-  return <TextInput style={styles.taskInput} placeholder="+ Add a Task" />;
+const TaskInput = ({value, onChangeText, onSubmitEditing}) => {
+  return (
+    <TextInput
+      value={value}
+      onChangeText={onChangeText}
+      onSubmitEditing={onSubmitEditing}
+      style={styles.taskInput}
+      placeholder="+ Add a Task"
+    />
+  );
 };
 
 const styles = StyleSheet.create({

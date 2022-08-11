@@ -7,12 +7,14 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint src/ --ext .js,.jsx"
+    "lint": "eslint src/ --ext .js,.jsx",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "react": "18.0.0",
     "react-native": "0.69.3",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-vector-icons": "^9.2.0",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

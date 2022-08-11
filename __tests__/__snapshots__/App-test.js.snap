@@ -25,6 +25,8 @@ exports[`App render snapshot test 1`] = `
     Todo TDD
   </Text>
   <TextInput
+    onChangeText={[Function]}
+    onSubmitEditing={[Function]}
     placeholder="+ Add a Task"
     style={
       Object {
@@ -38,6 +40,7 @@ exports[`App render snapshot test 1`] = `
         "width": 735,
       }
     }
+    value=""
   />
   <RCTScrollView>
     <View>

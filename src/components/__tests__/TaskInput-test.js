@@ -1,21 +1,61 @@
 import 'react-native';
 import React from 'react';
-import {render, screen} from '@testing-library/react-native';
+import {render, fireEvent, cleanup} from '@testing-library/react-native';
 
 import TaskInput from '../TaskInput';
 
-let props;
+describe('TaskInput Component Rendering', () => {
+  let wrapper;
+  let props;
 
-function getAppComponent(temprops) {
-  return <TaskInput {...temprops} />;
-}
-
-describe('TaskInput Component', () => {
-  props = {};
-  render(getAppComponent(props));
+  beforeEach(() => {
+    props = {};
+    wrapper = render(<TaskInput {...props} />);
+  });
+  afterEach(cleanup);
 
   it('should render placeholder', () => {
-    const element = screen.getByPlaceholderText('+ Add a Task');
-    expect(element).toBeTruthy();
+    expect(wrapper.getByPlaceholderText('+ Add a Task')).toBeTruthy();
+    expect(wrapper.getByPlaceholderText('+ Add a Task')).toBeEnabled();
+  });
+});
+
+describe('TaskInput Component Interaction', () => {
+  let wrapper;
+  let props;
+  const inputText = 'Build a React Native App';
+
+  beforeEach(() => {
+    props = {
+      value: '',
+      onChangeText: jest.fn(),
+      onSubmitEditing: jest.fn(),
+    };
+    wrapper = render(<TaskInput {...props} />);
+  });
+  afterEach(cleanup);
+
+  it('Check Input Value empty', () => {
+    const element = wrapper.getByPlaceholderText('+ Add a Task');
+    expect(element.props.value).toBe('');
+  });
+
+  it('Should call onChangeText when typing', () => {
+    const element = wrapper.getByPlaceholderText('+ Add a Task');
+    fireEvent.changeText(element, inputText);
+    expect(element.props.onChangeText).toHaveBeenCalledTimes(1);
+  });
+
+  it('Should send change value when typing', () => {
+    const element = wrapper.getByPlaceholderText('+ Add a Task');
+    fireEvent.changeText(element, inputText);
+    expect(element.props.onChangeText).toBeCalledWith(inputText);
+  });
+
+  it('Should call onSubmitEditing when pressing enter', () => {
+    const element = wrapper.getByPlaceholderText('+ Add a Task');
+    fireEvent.changeText(element, inputText);
+    fireEvent(element, 'onSubmitEditing');
+    expect(element.props.onSubmitEditing).toHaveBeenCalledTimes(1);
   });
 });
