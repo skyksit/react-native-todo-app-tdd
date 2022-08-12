@@ -12,15 +12,15 @@ const initialData = [
 
 export default function App() {
   const [data, setData] = React.useState(initialData);
-  const [newTask, setNewTask] = React.useState('');
+  const [newItem, setNewItem] = React.useState('');
 
   const handleInputTextChange = text => {
-    setNewTask(text);
+    setNewItem(text);
   };
 
-  const handleAddTask = () => {
-    setData([...data, {id: shortid.generate(), subject: newTask, done: false}]);
-    setNewTask('');
+  const handleAddItem = () => {
+    setData([...data, {id: shortid.generate(), subject: newItem, done: false}]);
+    setNewItem('');
   };
 
   const handleToggleItem = item => {
@@ -28,8 +28,6 @@ export default function App() {
       const newData = [...prevData];
       const index = prevData.indexOf(item);
       newData[index] = {...item, done: !item.done};
-
-      console.log(JSON.stringify(newData));
       return newData;
     });
   };
@@ -38,9 +36,9 @@ export default function App() {
     <>
       <Title title="Todo TDD" />
       <TaskInput
-        value={newTask}
+        value={newItem}
         onChangeText={handleInputTextChange}
-        onSubmitEditing={handleAddTask}
+        onSubmitEditing={handleAddItem}
       />
       <TaskList data={data} onToggleCheckbox={handleToggleItem} />
     </>

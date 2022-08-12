@@ -43,19 +43,19 @@ describe('TaskInput Component Interaction', () => {
   it('Should call onChangeText when typing', () => {
     const element = wrapper.getByPlaceholderText('+ Add a Task');
     fireEvent.changeText(element, inputText);
-    expect(element.props.onChangeText).toHaveBeenCalledTimes(1);
+    expect(props.onChangeText).toHaveBeenCalledTimes(1);
   });
 
   it('Should send change value when typing', () => {
     const element = wrapper.getByPlaceholderText('+ Add a Task');
     fireEvent.changeText(element, inputText);
-    expect(element.props.onChangeText).toBeCalledWith(inputText);
+    expect(props.onChangeText).toBeCalledWith(inputText);
   });
 
   it('Should call onSubmitEditing when pressing enter', () => {
     const element = wrapper.getByPlaceholderText('+ Add a Task');
     fireEvent.changeText(element, inputText);
     fireEvent(element, 'onSubmitEditing');
-    expect(element.props.onSubmitEditing).toHaveBeenCalledTimes(1);
+    expect(props.onSubmitEditing).toHaveBeenCalledTimes(1);
   });
 });

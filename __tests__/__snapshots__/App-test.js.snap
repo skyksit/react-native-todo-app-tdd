@@ -68,6 +68,8 @@ exports[`App render snapshot test 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
+              "color": "green",
+              "margin": 10,
               "opacity": 1,
             }
           }
@@ -80,7 +82,7 @@ exports[`App render snapshot test 1`] = `
               Array [
                 Object {
                   "color": "green",
-                  "fontSize": 13,
+                  "fontSize": 18,
                 },
                 undefined,
                 Object {
@@ -175,6 +177,8 @@ exports[`App render snapshot test 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
+              "color": "green",
+              "margin": 10,
               "opacity": 1,
             }
           }
@@ -187,7 +191,7 @@ exports[`App render snapshot test 1`] = `
               Array [
                 Object {
                   "color": "green",
-                  "fontSize": 13,
+                  "fontSize": 18,
                 },
                 undefined,
                 Object {

@@ -9,7 +9,7 @@ const TaskList = props => {
       {data.map(item => (
         <TaskItem
           key={item.id}
-          data={item}
+          item={item}
           onToggleCheckbox={onToggleCheckbox}
         />
       ))}

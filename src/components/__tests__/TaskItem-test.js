@@ -11,7 +11,7 @@ describe('TaskItem render', () => {
   beforeEach(() => {
     props = {
       key: '1',
-      data: {id: '1', subject: 'Learn React Native', done: false},
+      item: {id: '1', subject: 'Learn React Native', done: false},
     };
     wrapper = render(<TaskItem {...props} />);
   });
@@ -39,7 +39,7 @@ describe('TaskItem interaction', () => {
   beforeEach(() => {
     props = {
       key: '1',
-      data: {id: '1', subject: 'Learn React Native', done: false},
+      item: {id: '1', subject: 'Learn React Native', done: false},
       onToggleCheckbox: jest.fn(),
     };
     wrapper = render(<TaskItem {...props} />);
@@ -50,5 +50,12 @@ describe('TaskItem interaction', () => {
     const element = wrapper.getByTestId('checkbox');
     fireEvent(element, 'pressOut');
     expect(props.onToggleCheckbox).toHaveBeenCalledTimes(1);
+  });
+
+  it('should checkbox Style color is blue when done is true', () => {
+    props.item.done = true;
+    wrapper = render(<TaskItem {...props} />);
+    const element = wrapper.getByTestId('checkbox');
+    expect(element).toHaveStyle({color: 'blue'});
   });
 });
