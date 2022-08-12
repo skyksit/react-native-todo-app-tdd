@@ -28,11 +28,14 @@ const IconSizes = {
   extraLarge: 27,
 };
 
-const TaskItem = ({item, onToggleCheckbox}) => {
+const TaskItem = ({item, onToggleCheckbox, onDeleteItem}) => {
   const {subject, done: isDone} = item;
 
   const handleToggleCheckbox = () => {
     onToggleCheckbox(item);
+  };
+  const handleDeleteItem = () => {
+    onDeleteItem(item);
   };
 
   return (
@@ -54,7 +57,13 @@ const TaskItem = ({item, onToggleCheckbox}) => {
       {!isDone && (
         <FeatherIcon name="edit-2" size="medium" color="blue" testId="edit" />
       )}
-      <FeatherIcon name="delete" size="medium" color="red" testId="delete" />
+      <TouchableOpacity
+        style={styles.deleteButton}
+        activeOpacity={0.8}
+        onPress={handleDeleteItem}
+        testID="delete">
+        <FeatherIcon name="delete" size="medium" color="red" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -89,6 +98,9 @@ const styles = StyleSheet.create({
       color: 'gray',
       textDecorationLine: 'line-through',
     },
+  },
+  deleteButton: {
+    margin: 10,
   },
 });
 

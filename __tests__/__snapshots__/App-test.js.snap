@@ -130,28 +130,47 @@ exports[`App render snapshot test 1`] = `
         >
           
         </Text>
-        <Text
-          allowFontScaling={false}
-          selectable={false}
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "color": "red",
-                "fontSize": 18,
-              },
-              undefined,
-              Object {
-                "fontFamily": "Feather",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "margin": 10,
+              "opacity": 1,
+            }
           }
           testID="delete"
         >
-          
-        </Text>
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "red",
+                  "fontSize": 18,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Feather",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
       </View>
       <View
         style={
@@ -239,28 +258,47 @@ exports[`App render snapshot test 1`] = `
         >
           
         </Text>
-        <Text
-          allowFontScaling={false}
-          selectable={false}
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "color": "red",
-                "fontSize": 18,
-              },
-              undefined,
-              Object {
-                "fontFamily": "Feather",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "margin": 10,
+              "opacity": 1,
+            }
           }
           testID="delete"
         >
-          
-        </Text>
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "red",
+                  "fontSize": 18,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Feather",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
       </View>
     </View>
   </RCTScrollView>

@@ -32,6 +32,13 @@ export default function App() {
     });
   };
 
+  const handleDeleteItem = item => {
+    setData(prevData => {
+      const newData = prevData.filter(i => i !== item);
+      return newData;
+    });
+  };
+
   return (
     <>
       <Title title="Todo TDD" />
@@ -40,7 +47,11 @@ export default function App() {
         onChangeText={handleInputTextChange}
         onSubmitEditing={handleAddItem}
       />
-      <TaskList data={data} onToggleCheckbox={handleToggleItem} />
+      <TaskList
+        data={data}
+        onToggleCheckbox={handleToggleItem}
+        onDeleteItem={handleDeleteItem}
+      />
     </>
   );
 }

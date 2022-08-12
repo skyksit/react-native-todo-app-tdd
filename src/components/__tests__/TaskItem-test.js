@@ -41,6 +41,7 @@ describe('TaskItem interaction', () => {
       key: '1',
       item: {id: '1', subject: 'Learn React Native', done: false},
       onToggleCheckbox: jest.fn(),
+      onDeleteItem: jest.fn(),
     };
     wrapper = render(<TaskItem {...props} />);
   });
@@ -57,5 +58,11 @@ describe('TaskItem interaction', () => {
     wrapper = render(<TaskItem {...props} />);
     const element = wrapper.getByTestId('checkbox');
     expect(element).toHaveStyle({color: 'blue'});
+  });
+
+  it('should call delete method when delete is clicked', () => {
+    const element = wrapper.getByTestId('delete');
+    fireEvent.press(element);
+    expect(props.onDeleteItem).toHaveBeenCalledTimes(1);
   });
 });
