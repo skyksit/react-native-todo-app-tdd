@@ -3,7 +3,7 @@ import {ScrollView} from 'react-native';
 import TaskItem from './TaskItem';
 
 const TaskList = props => {
-  const {data, onToggleCheckbox, onDeleteItem} = props;
+  const {data, onToggleCheckbox, onDeleteItem, onUpdateItem} = props;
   return (
     <ScrollView>
       {data.map(item => (
@@ -12,6 +12,7 @@ const TaskList = props => {
           item={item}
           onToggleCheckbox={onToggleCheckbox}
           onDeleteItem={onDeleteItem}
+          onUpdateItem={onUpdateItem}
         />
       ))}
     </ScrollView>

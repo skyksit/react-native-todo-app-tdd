@@ -6,6 +6,7 @@ import {
   View,
   Text,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 
 FeatIcon.loadFont();
@@ -28,7 +29,9 @@ const IconSizes = {
   extraLarge: 27,
 };
 
-const TaskItem = ({item, onToggleCheckbox, onDeleteItem}) => {
+const TaskItem = ({item, onToggleCheckbox, onDeleteItem, onUpdateItem}) => {
+  const [isEditMode, setIsEditMode] = React.useState(false);
+  const [newSubject, setNewSubject] = React.useState(item.subject);
   const {subject, done: isDone} = item;
 
   const handleToggleCheckbox = () => {
@@ -36,6 +39,13 @@ const TaskItem = ({item, onToggleCheckbox, onDeleteItem}) => {
   };
   const handleDeleteItem = () => {
     onDeleteItem(item);
+  };
+  const handleEditItem = () => {
+    setIsEditMode(true);
+  };
+  const handleFinishEdit = () => {
+    setIsEditMode(false);
+    onUpdateItem(item, newSubject);
   };
 
   return (
@@ -51,11 +61,29 @@ const TaskItem = ({item, onToggleCheckbox, onDeleteItem}) => {
           color={isDone ? 'blue' : 'green'}
         />
       </TouchableOpacity>
-      <Text style={isDone ? styles.subject.checked : styles.subject.unchecked}>
-        {subject}
-      </Text>
+      {isEditMode ? (
+        <TextInput
+          value={newSubject}
+          onChangeText={text => setNewSubject(text)}
+          onSubmitEditing={handleFinishEdit}
+          style={styles.taskInput}
+          placeholder="Edit a Task"
+        />
+      ) : (
+        <Text
+          style={isDone ? styles.subject.checked : styles.subject.unchecked}>
+          {subject}
+        </Text>
+      )}
+
       {!isDone && (
-        <FeatherIcon name="edit-2" size="medium" color="blue" testId="edit" />
+        <TouchableOpacity
+          style={styles.editButton}
+          activeOpacity={0.8}
+          onPress={handleEditItem}
+          testID="edit">
+          <FeatherIcon name="edit-2" size="medium" color="blue" />
+        </TouchableOpacity>
       )}
       <TouchableOpacity
         style={styles.deleteButton}
@@ -101,6 +129,19 @@ const styles = StyleSheet.create({
   },
   deleteButton: {
     margin: 10,
+  },
+  editButton: {
+    margin: 10,
+  },
+  taskInput: {
+    width: Dimensions.get('window').width - 140,
+    fontSize: 20,
+    margin: 5,
+    padding: 8,
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: '#ccc',
+    alignItems: 'center',
   },
 });
 

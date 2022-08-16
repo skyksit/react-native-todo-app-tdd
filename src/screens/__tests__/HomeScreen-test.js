@@ -50,4 +50,17 @@ describe('HomeScreen', () => {
       expect(elementsAfterDelete.length).toBe(1);
     });
   });
+
+  describe('Edit Task', () => {
+    it('should edit first task', () => {
+      const expectText = 'submit your app to the App Store';
+      const elements = wrapper.getAllByTestId('edit');
+      expect(elements.length).toBe(2);
+      fireEvent.press(elements[0]);
+      const textInput = wrapper.getByPlaceholderText('Edit a Task');
+      fireEvent.changeText(textInput, expectText);
+      fireEvent(textInput, 'onSubmitEditing');
+      expect(wrapper.getByText(expectText)).toBeTruthy();
+    });
+  });
 });

@@ -7,10 +7,6 @@ import TaskList from '../TaskList';
 let props;
 let wrapper;
 
-function getAppComponent(temprops) {
-  return <TaskList {...temprops} />;
-}
-
 describe('TaskList render', () => {
   beforeEach(() => {
     props = {

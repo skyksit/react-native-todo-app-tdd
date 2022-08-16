@@ -39,6 +39,15 @@ export default function App() {
     });
   };
 
+  const handleUpdateItem = (item, newSubject) => {
+    setData(prevData => {
+      const newData = [...prevData];
+      const index = prevData.indexOf(item);
+      newData[index] = {...item, subject: newSubject};
+      return newData;
+    });
+  };
+
   return (
     <>
       <Title title="Todo TDD" />
@@ -51,6 +60,7 @@ export default function App() {
         data={data}
         onToggleCheckbox={handleToggleItem}
         onDeleteItem={handleDeleteItem}
+        onUpdateItem={handleUpdateItem}
       />
     </>
   );
