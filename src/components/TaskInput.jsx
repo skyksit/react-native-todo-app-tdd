@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TaskInput;
+export default React.memo(TaskInput);

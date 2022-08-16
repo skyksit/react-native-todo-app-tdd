@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660290287576" clover="3.2.0">
-  <project timestamp="1660290287577" name="All files">
-    <metrics statements="43" coveredstatements="43" conditionals="10" coveredconditionals="10" methods="17" coveredmethods="17" elements="70" coveredelements="70" complexity="0" loc="43" ncloc="43" packages="3" files="6" classes="6"/>
+<coverage generated="1660621718234" clover="3.2.0">
+  <project timestamp="1660621718235" name="All files">
+    <metrics statements="58" coveredstatements="58" conditionals="12" coveredconditionals="12" methods="23" coveredmethods="23" elements="93" coveredelements="93" complexity="0" loc="58" ncloc="58" packages="3" files="6" classes="6"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.js" path="/Users/skyksit/studyspace/reactNativeTodos/src/App.js">
@@ -11,65 +11,80 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="22" coveredstatements="22" conditionals="10" coveredconditionals="10" methods="8" coveredmethods="8"/>
+      <metrics statements="30" coveredstatements="30" conditionals="12" coveredconditionals="12" methods="11" coveredmethods="11"/>
       <file name="TaskInput.jsx" path="/Users/skyksit/studyspace/reactNativeTodos/src/components/TaskInput.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="3" type="stmt"/>
-        <line num="5" count="17" type="stmt"/>
+        <line num="5" count="16" type="stmt"/>
         <line num="16" count="3" type="stmt"/>
       </file>
       <file name="TaskItem.jsx" path="/Users/skyksit/studyspace/reactNativeTodos/src/components/TaskItem.jsx">
-        <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
-        <line num="14" count="106" type="stmt"/>
-        <line num="24" count="4" type="stmt"/>
-        <line num="31" count="4" type="stmt"/>
-        <line num="32" count="36" type="stmt"/>
-        <line num="34" count="36" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="37" count="36" type="stmt"/>
+        <metrics statements="20" coveredstatements="20" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="7"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="102" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="45" type="stmt"/>
+        <line num="34" count="45" type="stmt"/>
+        <line num="35" count="45" type="stmt"/>
+        <line num="37" count="45" type="stmt"/>
         <line num="38" count="2" type="stmt"/>
-        <line num="41" count="36" type="stmt"/>
-        <line num="71" count="4" type="stmt"/>
+        <line num="40" count="45" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="43" count="45" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="46" count="45" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="51" count="45" type="stmt"/>
+        <line num="67" count="3" type="stmt"/>
+        <line num="99" count="4" type="stmt"/>
       </file>
       <file name="TaskList.jsx" path="/Users/skyksit/studyspace/reactNativeTodos/src/components/TaskList.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="5" count="3" type="stmt"/>
-        <line num="6" count="14" type="stmt"/>
-        <line num="7" count="14" type="stmt"/>
-        <line num="10" count="28" type="stmt"/>
+        <line num="6" count="15" type="stmt"/>
+        <line num="7" count="15" type="stmt"/>
+        <line num="10" count="30" type="stmt"/>
       </file>
       <file name="Title.jsx" path="/Users/skyksit/studyspace/reactNativeTodos/src/components/Title.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="3" type="stmt"/>
-        <line num="5" count="13" type="stmt"/>
+        <line num="5" count="15" type="stmt"/>
         <line num="8" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.screens">
-      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
       <file name="HomeScreen.jsx" path="/Users/skyksit/studyspace/reactNativeTodos/src/screens/HomeScreen.jsx">
-        <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+        <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="14" count="12" type="stmt"/>
-        <line num="15" count="12" type="stmt"/>
-        <line num="17" count="12" type="stmt"/>
+        <line num="14" count="14" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+        <line num="17" count="14" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="21" count="12" type="stmt"/>
+        <line num="21" count="14" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="26" count="12" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="35" count="12" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
-        <line num="37" count="2" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="42" count="12" type="stmt"/>
+        <line num="40" count="14" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="47" count="14" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="56" count="14" type="stmt"/>
       </file>
     </package>
   </project>

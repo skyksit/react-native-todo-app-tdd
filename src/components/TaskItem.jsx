@@ -11,7 +11,7 @@ import {
 
 FeatIcon.loadFont();
 
-const FeatherIcon = ({name, size, color, testId}) => {
+const FeatherIcon = React.memo(({name, size, color, testId}) => {
   return (
     <FeatIcon
       name={name}
@@ -20,7 +20,7 @@ const FeatherIcon = ({name, size, color, testId}) => {
       testID={testId}
     />
   );
-};
+});
 
 const IconSizes = {
   small: 13,
@@ -145,4 +145,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TaskItem;
+export default React.memo(TaskItem);

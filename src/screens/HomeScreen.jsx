@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 
 import Title from '../components/Title';
 import TaskInput from '../components/TaskInput';
@@ -11,42 +11,47 @@ const initialData = [
 ];
 
 export default function App() {
-  const [data, setData] = React.useState(initialData);
-  const [newItem, setNewItem] = React.useState('');
+  const [data, setData] = useState(initialData);
+  const [newItem, setNewItem] = useState('');
 
-  const handleInputTextChange = text => {
+  const handleInputTextChange = useCallback(text => {
     setNewItem(text);
-  };
+  }, []);
 
-  const handleAddItem = () => {
-    setData([...data, {id: shortid.generate(), subject: newItem, done: false}]);
+  const handleAddItem = useCallback(() => {
+    setData(preData => {
+      return [
+        {id: shortid.generate(), subject: newItem, done: false},
+        ...preData,
+      ];
+    });
     setNewItem('');
-  };
+  }, [newItem]);
 
-  const handleToggleItem = item => {
+  const handleToggleItem = useCallback(item => {
     setData(prevData => {
       const newData = [...prevData];
       const index = prevData.indexOf(item);
       newData[index] = {...item, done: !item.done};
       return newData;
     });
-  };
+  }, []);
 
-  const handleDeleteItem = item => {
+  const handleDeleteItem = useCallback(item => {
     setData(prevData => {
       const newData = prevData.filter(i => i !== item);
       return newData;
     });
-  };
+  }, []);
 
-  const handleUpdateItem = (item, newSubject) => {
+  const handleUpdateItem = useCallback((item, newSubject) => {
     setData(prevData => {
       const newData = [...prevData];
       const index = prevData.indexOf(item);
       newData[index] = {...item, subject: newSubject};
       return newData;
     });
-  };
+  }, []);
 
   return (
     <>
